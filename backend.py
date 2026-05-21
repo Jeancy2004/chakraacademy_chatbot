@@ -5,11 +5,11 @@ app = Flask(__name__)
 
 def get_db():
     return mysql.connector.connect(
-        host="mysql.railway.internal",
+        host="kodama.proxy.rlwy.net",
         user="root",
         password="slAVRpPALeXBSWyfxAzakwaOEJmTpfjV",
         database="railway",
-        port=3306
+        port=12638
     )
 
 @app.route('/')
