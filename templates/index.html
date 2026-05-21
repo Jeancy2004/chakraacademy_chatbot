@@ -163,8 +163,16 @@ function send() {
                 <span>${data.reply}</span>
             </div>
         `;
+        chat.scrollTop = chat.scrollHeight;
+        })
+    .catch(err => {
+        chat.innerHTML += `
+            <div class="msg bot">
+                <span>❌ Error: ${err.message}</span>
+            </div>
+        `;
     });
-}
+
 
 
 function sendFile() {
